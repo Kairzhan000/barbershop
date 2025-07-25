@@ -1,0 +1,24 @@
+# node modules
+node_modules/
+
+# build output
+dist/
+build/
+*.log
+*.tmp
+*.cache
+
+# system files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Tailwind / Sass output
+src/output.css
+src/output.css.map
+
+# environment variables (если вдруг используешь)
+.env

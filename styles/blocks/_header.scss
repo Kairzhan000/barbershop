@@ -1,0 +1,165 @@
+@use '../helpers' as *;
+
+.header {
+  width: 100%; // на всю ширину экрана
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      align-items: center;
+    }
+
+    &_left {
+      @include mobile {
+        display: flex;
+        align-items: center;
+        gap: rem(16);
+      }
+
+      &_adress {
+        display: none;
+        @include mobile {
+          display: flex;
+        }
+      }
+
+      img {
+        display: none;
+        @include mobile {
+          display: flex;
+          width: rem(60);
+        }
+      }
+
+      &_list {
+        display: flex;
+        gap: 1.5rem;
+
+        @include mobile {
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 70%;
+          padding: rem(48) rem(32);
+          display: flex;
+          flex-direction: column;
+          row-gap: rem(128);
+          background-color: #ffffff;
+          z-index: 4;
+
+          transform: translateX(-100%);
+          opacity: 0;
+          transition: transform 0.4s ease, opacity 0.4s ease;
+          pointer-events: none;
+        }
+
+        &._active {
+          @include mobile {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+
+        li {
+          a {
+            color: white;
+            transition: color 0.3s ease;
+
+            @include mobile {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
+    &_right {
+      &_adress {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // при скролле
+  &.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .header__inner_left_adress,
+    .header__inner_right_adress,
+    .header__inner_left_list li a {
+      color: black !important;
+    }
+
+    .burger span {
+      background-color: black !important;
+    }
+  }
+}
+
+.burger {
+  display: none;
+
+  @include mobile {
+    display: block;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    z-index: 5;
+
+    span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #ffffff;
+      transition: all 0.3s ease;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: calc(50% - 1px);
+      }
+
+      &:last-child {
+        bottom: 0;
+      }
+    }
+
+    &._active {
+      span {
+        background-color: red;
+
+        &:first-child {
+          transform: rotate(-45deg);
+          top: 10px;
+        }
+
+        &:nth-child(2) {
+          transform: scale(0);
+        }
+
+        &:last-child {
+          transform: rotate(48deg);
+          bottom: 11px;
+        }
+      }
+    }
+  }
+}

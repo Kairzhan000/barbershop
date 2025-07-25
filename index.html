@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barbershop</title>
+  <link rel="stylesheet" href="./src/output.css" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <script src="./scripts/main.js" defer></script>
+</head>
+<body>
+  <main>
+    <!-- Главная -->
+    <div class="home" id="home">
+      <header class="header">
+        <div class="header__inner w-full flex">
+          <div class="header__inner_left">
+            <img src="./images/barber-logo.png" alt="">
+            <div class="header__inner_left_adress text-header h5">Улица Некрасова дом 16</div>
+            <ul class="header__inner_left_list flex gap-6">
+              <li><a href="#salon" class="work_please h5 text-header">Салон</a></li>
+              <li><a href="#about" class="work_please h5 text-header">О нас</a></li>
+              <li><a href="#barbers" class="work_please h5 text-header">Барберы</a></li>
+              <li><a href="#contacts" class="work_please h5 text-header">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="header__inner_right">
+            <div class="header__inner_right_adress text-header h5">Улица Некрасова дом 16</div>
+            <div class="burger is-active">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+      <div class="home__inner">
+        <div class="home__inner_left">
+          <img src="./images/barber-logo.png" alt="">
+          <button class="signup-btn">ЗАПИСАТЬСЯ</button>
+        </div>
+        <div class="home__inner_right">
+          <div class="home__inner_right_title">
+            <h1 class="text-white">ХОРОШИЕ СТРИЖКИ И <br> БРИТЬЕ ПО ДОСТУПНОЙ ЦЕНЕ</h1>
+          </div>
+          <div class="home__inner_right_info">
+            <h4>Мужской стиль начинается здесь и сейчас</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Салон -->
+    <div class="salon" id="salon">
+      <div class="salon__inner">
+        <div class="salon__inner_left">
+          <div class="salon__inner_left_img">
+            <img src="./images/barber-salon.png" alt="">
+          </div>
+          <div class="salon__inner_left_info">
+            <div class="salon__inner_left_info_title h5">BARBERSHOP</div>
+            <div class="salon__inner_left_info_adress">
+              <div class="salon__inner_left_info_adress_top">Адрес</div>
+              <div class="salon__inner_left_info_adress_bottom h5">Улица Некрасова дом 16</div>
+            </div>
+            <div class="salon__inner_left_info_contact">
+              <div class="salon__inner_left_info_contact_top">Контакты</div>
+              <div class="salon__inner_left_info_contact_bottom h5">+7-777-777-7777</div>
+              <div class="salon__inner_left_info_contact_bottom h5">+7-777-777-7777</div>
+            </div>
+          </div>
+          <div class="salon__inner_left_btn">
+            <button class="signup-btn"><p>ЗАПИСАТЬСЯ</p></button>
+          </div>
+        </div>
+        <div class="salon__inner_right">
+          <div class="salon__inner_right_title h1">НАШ САЛОН</div>
+          <div class="salon__inner_right_info h4">Мы не просто стрижём — мы заряжаем уверенностью. Заходи, тебя здесь уже ждут</div>
+        </div>
+      </div>
+      <div class="salon_img">
+        <img src="./images/barber-trimer.png" alt="">
+      </div>
+    </div>
+
+    <!-- О нас -->
+    <div class="about" id="about">
+      <div class="about__inner">
+        <div class="about__inner_left">
+          <img src="./images/barber-bout.png" alt="">
+        </div>
+        <div class="about__inner_right">
+          <div class="about__inner_right_title h1">КРАТКО О НАС</div>
+          <div class="about__inner_right_info h4">
+            "Барбершоп" — это не просто место, где стригут. Это территория мужского стиля, уюта и уважения. Мы делаем идеальные стрижки, приводим в порядок бороды и создаём атмосферу, куда хочется возвращаться. Здесь ценят твой характер, уважают твоё время и знают, что такое настоящий сервис. Заходи — мы уже ждём тебя.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Барберы -->
+    <div class="barbers" id="barbers">
+      <div class="barbers__inner">
+        <div class="barbers__inner_title h1">НАШИ БАРБЕРЫ</div>
+        <div class="barbers__inner_content">
+          <div class="barbers__inner_content_person">
+            <div class="barbers__inner_content_person_ava"><img src="./images/barber-ava.png" alt=""></div>
+            <div class="barbers__inner_content_person_name">Нурбек</div>
+          </div>
+          <div class="barbers__inner_content_person">
+            <div class="barbers__inner_content_person_ava"><img src="./images/barber-ava.png" alt=""></div>
+            <div class="barbers__inner_content_person_name">Нурлан</div>
+          </div>
+          <div class="barbers__inner_content_person">
+            <div class="barbers__inner_content_person_ava"><img src="./images/barber-ava.png" alt=""></div>
+            <div class="barbers__inner_content_person_name">Алихан</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Контакты -->
+  <footer class="footer" id="contacts">
+    <div class="footer__inner">
+      <div class="footer__inner_title h1">КОНТАКТЫ</div>
+      <div class="footer__inner_content">
+        <div class="footer__inner_content_adress">Улица Некрасова дом 16</div>
+        <div class="footer__inner_content_num">+7-777-777-7777</div>
+        <div class="footer__inner_content_inst">
+          <img src="./icons/Instagram.svg" alt="">
+          <a href="#">barbershop.kz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

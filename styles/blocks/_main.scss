@@ -1,0 +1,38 @@
+@use '../helpers' as *;
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrrat';
+}
+.work_please{
+    transition: all 0.1s;
+    padding-bottom: 8px;
+}
+.work_please:hover{
+        border-bottom: 2px solid #FFCC49;
+    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-header {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.header.scrolled .text-header {
+  color: black;
+}

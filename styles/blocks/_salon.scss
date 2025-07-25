@@ -1,0 +1,111 @@
+@use '../helpers' as *;
+
+.salon {
+    background-color: #ffffff;
+    padding: 100px 30px;
+    position: relative;
+    display: flex;
+    @include mobile{
+        padding: 50px 30px;
+    }
+    &_img{
+        position: absolute;
+        right: 0;
+        margin-top: 90px;
+        @include tablet {
+            display: none;
+        }
+    }
+    &__inner{
+        display: flex;
+        max-width: 1440px;
+        margin: 0 auto;
+        transform: translateX(-10px); /* сдвигает на 40px влево */
+        @include tablet{
+            transform: translateX(0);
+        }
+        @include mobile{
+            flex-direction: column-reverse;
+            row-gap: rem(30);
+        }
+        &_left{
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            // -webkit-box-shadow: 0 2px 10px -5px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 2px 10px -5px rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+            position: relative;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(40);
+            
+            @include mobile{
+                max-width: rem(340);
+            }
+
+            &_info{
+                display: flex;
+                flex-direction: column;
+                row-gap: rem(10);
+                padding-left: rem(20);
+
+                &_title{
+                    font-weight: 600;
+
+                }
+                &_adress{
+                    &_top{
+                        color: var(--color-text);
+                    }
+                }
+                &_contact{
+                    &_top{
+                        color: var(--color-text);
+                    }
+                }
+            }
+            &_btn{
+                display: flex;
+                margin: 0 auto;
+                padding-bottom: rem(16);
+                button{
+                    background-color: #FFCC49;
+                    padding: 12px 126px;
+                    border-radius: rem(12);
+                    max-width: rem(500);
+                    transition: all 0.2s;
+                    @include tablet{
+                        padding: 12px 90px;
+                    }
+                }button:hover{
+                    background-color: #efb31b;
+                }
+            }
+            
+        }
+
+        &_right{
+            
+            padding-top: rem(30);
+            padding-left: rem(0);
+            max-width: rem(500);
+            @include mobile{
+                padding-top: 0;
+            }
+            &_title{
+                @include mobile{
+                    font-size: rem(24);
+                }
+            }
+            &_info{
+                @include mobile{
+                    font-size: rem(16);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@use '../helpers' as *;
+
+.about{
+    background-color: #ffffff;
+    position: relative;
+    padding: 70px 30px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+    @include mobile{
+        padding: 50px 30px;
+    }
+
+    &__inner{
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(280px, 570px) minmax(280px, 400px);
+        grid-column-gap: 100px;
+        @include tablet{
+            display: flex;
+            flex-direction: column-reverse;
+            row-gap: rem(30);
+        }
+
+        &_right{
+
+            &_title{
+                @include mobile{
+                    font-size: rem(24);
+                }
+            }
+            &_info{
+                font-size: rem(16);
+            }
+            
+        }
+    }
+    }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Регистрация в Барбершоп</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+        form {
+            background: #fff;
+            padding: 25px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        button {
+            margin-top: 25px;
+            width: 100%;
+            padding: 12px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<form action="#" method="post">
+    <h2>Регистрация в Барбершоп</h2>
+
+    <label for="name">Имя и Фамилия</label>
+    <input type="text" id="name" name="name" required placeholder="Введите ваше имя" />
+
+    <label for="phone">Телефон</label>
+    <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__" pattern="^\+7\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}$" />
+
+    <label for="date">Дата записи</label>
+    <input type="date" id="date" name="date" required />
+
+    <label for="time">Время записи</label>
+    <input type="time" id="time" name="time" required />
+
+    <label for="service">Услуга</label>
+    <select id="service" name="service" required>
+        <option value="" disabled selected>Выберите услугу</option>
+        <option value="haircut">Стрижка</option>
+        <option value="beard_trim">Оформление бороды</option>
+        <option value="shave">Классическое бритьё</option>
+        <option value="combo">Стрижка + борода</option>
+    </select>
+
+    <button type="submit">Записаться</button>
+</form>
+
+</body>
+</html>

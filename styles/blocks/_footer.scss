@@ -1,0 +1,60 @@
+@use '../helpers' as *;
+
+.footer{
+    background-color: #ffffff;
+    position: relative;
+    padding: 100px 30px 100px;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(30);
+        &_title{
+            @include mobile{
+                font-size: rem(24);
+            }
+        }
+
+        &_content{
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(10);
+            @include mobile{
+                row-gap: rem(6);
+            }
+            &_adress{
+                font-size: rem(24);
+                font-family: 'Montserrat';
+                @include mobile{
+                    font-size: rem(16);
+                }
+            }
+            &_num{
+                font-size: rem(24);
+                font-family: 'Montserrat';
+                @include mobile{
+                    font-size: rem(16);
+                }
+            }
+            &_inst{
+                display: flex;
+                align-items: center;
+                @include mobile{
+                    font-size: rem(16);
+                }
+
+                a{
+                    font-family: 'Montserrat';
+                    font-size: rem(24);
+                    font-weight: 600;
+                    color: #0022FF;
+                    @include mobile{
+                        font-size: rem(16);
+                    }
+                }
+            }
+        }
+    }
+}
