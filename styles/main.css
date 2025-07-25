@@ -298,6 +298,11 @@ header {
   padding-bottom: 11.25rem;
 }
 @media (width <= 47.99875rem) {
+  .home__inner_right {
+    padding-bottom: 3.75rem;
+  }
+}
+@media (width <= 47.99875rem) {
   .home__inner_right_title h1 {
     font-size: 1.5rem;
   }

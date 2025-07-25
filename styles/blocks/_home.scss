@@ -74,6 +74,9 @@
     }
     &_right{
         padding-bottom: rem(180);
+        @include mobile {
+            padding-bottom: rem(60);
+        }
         &_title{
             h1{
                 @include mobile{
